@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>974625835406-upctt68jofmuko7lc8r7j1m0nr4alclh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.974625835406-upctt68jofmuko7lc8r7j1m0nr4alclh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyByNOWFKzGO8Brr_qVnOMjDZ_HXBQD2mNk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>974625835406</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.groupieChatappFirebase</string>
+	<key>PROJECT_ID</key>
+	<string>groupie-flutter-chatapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>groupie-flutter-chatapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:974625835406:ios:dd6116e5875fb00805fcdf</string>
+</dict>
+</plist>
