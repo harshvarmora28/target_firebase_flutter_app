@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:groupie_chatapp_firebase/helper/helper_function.dart';
 import 'package:groupie_chatapp_firebase/pages/auth/login_page.dart';
+import 'package:groupie_chatapp_firebase/pages/home_page.dart';
 import 'package:groupie_chatapp_firebase/service/auth_service.dart';
 import 'package:groupie_chatapp_firebase/widgets/widgets.dart';
 import 'package:flutter/gestures.dart';
@@ -167,9 +169,13 @@ class _RegisterPageState extends State<RegisterPage> {
       });
       await authService
           .registerUserWithEmailandPassword(fullName, email, password)
-          .then((value) {
+          .then((value) async {
         if (value == true) {
           //saving the shared preferences
+          await HelperFunction.saveUserLoggedInStatus(true);
+          await HelperFunction.saveUserNameSF(fullName);
+          await HelperFunction.saveUserEmailSF(email);
+          nextScreenReplace(context, const HomePage());
         } else {
           showSnackbar(context, Colors.red, value);
           setState(() {
