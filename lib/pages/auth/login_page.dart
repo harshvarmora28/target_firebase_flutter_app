@@ -25,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 23, 21, 19),
       body: _isLoading
           ? Center(
               child: CircularProgressIndicator(
@@ -43,18 +44,22 @@ class _LoginPageState extends State<LoginPage> {
                       const Text(
                         "Groupie",
                         style: TextStyle(
+                            color: Colors.white,
                             fontSize: 40, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 10),
                       const Text(
                         "Login now to see what they are talking!",
                         style: TextStyle(
+                            color: Colors.white,
                             fontSize: 15, fontWeight: FontWeight.w400),
                       ),
                       Image.asset("assets/login.png"),
                       TextFormField(
+                        style: TextStyle(color: Colors.white),
                         decoration: textInputDecoration.copyWith(
                             labelText: "Email",
+                            labelStyle: TextStyle(color: Colors.white),
                             prefixIcon: Icon(
                               Icons.email,
                               color: Theme.of(context).primaryColor,
@@ -75,9 +80,11 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       const SizedBox(height: 15),
                       TextFormField(
+                        style: TextStyle(color: Colors.white),
                         obscureText: true,
                         decoration: textInputDecoration.copyWith(
                             labelText: "Password",
+                            labelStyle: TextStyle(color: Colors.white),
                             prefixIcon: Icon(
                               Icons.lock,
                               color: Theme.of(context).primaryColor,
@@ -118,14 +125,14 @@ class _LoginPageState extends State<LoginPage> {
                         height: 10,
                       ),
                       Text.rich(TextSpan(
-                        text: "Don't have an account?",
+                        text: "Don't have an account?  ",
                         style:
-                            const TextStyle(color: Colors.black, fontSize: 14),
+                            const TextStyle(color: Colors.white, fontSize: 14),
                         children: <TextSpan>[
                           TextSpan(
                               text: "Register here",
                               style: const TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   decoration: TextDecoration.underline),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
