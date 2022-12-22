@@ -18,6 +18,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 23, 21, 19),
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         elevation: 0,
@@ -28,6 +29,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 fontWeight: FontWeight.bold)),
       ),
       drawer: Drawer(
+      backgroundColor: Color.fromARGB(255, 23, 21, 19),
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 50),
           children: <Widget>[
@@ -42,7 +44,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Text(
               widget.userName,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
             ),
             const SizedBox(
               height: 30,
@@ -56,10 +58,10 @@ class _ProfilePageState extends State<ProfilePage> {
               },
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              leading: const Icon(Icons.group),
+              leading: const Icon(Icons.group, color: Color.fromARGB(255, 192, 192, 192),),
               title: const Text(
                 "Groups",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ),
             ListTile(
@@ -69,10 +71,10 @@ class _ProfilePageState extends State<ProfilePage> {
               selectedColor: Theme.of(context).primaryColor,
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              leading: const Icon(Icons.person),
+              leading: const Icon(Icons.person, color: Color.fromARGB(255, 192, 192, 192),),
               title: const Text(
                 "Profile",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ),
             ListTile(
@@ -116,10 +118,10 @@ class _ProfilePageState extends State<ProfilePage> {
               selectedColor: Theme.of(context).primaryColor,
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              leading: const Icon(Icons.logout),
+              leading: const Icon(Icons.logout, color: Color.fromARGB(255, 192, 192, 192),),
               title: const Text(
                 "Logout",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ),
           ],
@@ -138,15 +140,15 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(height: 15,),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("Full Name", style: TextStyle(fontSize: 17),),
-              Text(widget.userName, style: TextStyle(fontSize: 17),),
+              const Text("Full Name", style: TextStyle(fontSize: 17, color: Colors.white),),
+              Text(widget.userName, style: TextStyle(fontSize: 17, color: Colors.white),),
             ],
             ),
-            const Divider(height: 20,),
+            const Divider(height: 20, color: Color.fromARGB(255, 104, 104, 104),),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("Email", style: TextStyle(fontSize: 17),),
-              Text(widget.email, style: TextStyle(fontSize: 17),),
+              const Text("Email", style: TextStyle(fontSize: 17, color: Colors.white),),
+              Text(widget.email, style: TextStyle(fontSize: 17, color: Colors.white),),
             ],
             ),
 

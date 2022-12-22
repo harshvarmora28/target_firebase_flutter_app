@@ -62,6 +62,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 23, 21, 19),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -83,6 +84,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       drawer: Drawer(
+      backgroundColor: Color.fromARGB(255, 23, 21, 19),
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 50),
           children: <Widget>[
@@ -97,13 +99,14 @@ class _HomePageState extends State<HomePage> {
             Text(
               userName,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
             ),
             const SizedBox(
               height: 30,
             ),
             const Divider(
               height: 2,
+              color: Color.fromARGB(255, 104, 104, 104),
             ),
             ListTile(
               onTap: () {},
@@ -111,10 +114,10 @@ class _HomePageState extends State<HomePage> {
               selected: true,
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              leading: const Icon(Icons.group),
+              leading: const Icon(Icons.group, color: Color.fromARGB(255, 192, 192, 192),),
               title: const Text(
                 "Groups",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ),
             ListTile(
@@ -129,10 +132,10 @@ class _HomePageState extends State<HomePage> {
               selectedColor: Theme.of(context).primaryColor,
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              leading: const Icon(Icons.person),
+              leading: const Icon(Icons.person, color: Color.fromARGB(255, 192, 192, 192),),
               title: const Text(
                 "Profile",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ),
             ListTile(
@@ -176,10 +179,10 @@ class _HomePageState extends State<HomePage> {
               selectedColor: Theme.of(context).primaryColor,
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              leading: const Icon(Icons.logout),
+              leading: const Icon(Icons.logout, color: Color.fromARGB(255, 192, 192, 192),),
               title: const Text(
                 "Logout",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ),
           ],
@@ -207,9 +210,11 @@ class _HomePageState extends State<HomePage> {
         context: context,
         builder: (context) {
           return AlertDialog(
+            backgroundColor: Color.fromARGB(255, 23, 21, 19),
             title: const Text(
               "Create a group",
               textAlign: TextAlign.left,
+              style: TextStyle(color: Colors.white),
             ),
             content: Column(
               mainAxisSize: MainAxisSize.min,
@@ -226,7 +231,7 @@ class _HomePageState extends State<HomePage> {
                             groupName = val;
                           });
                         },
-                        style: const TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
