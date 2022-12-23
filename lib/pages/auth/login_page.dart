@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       const Text(
-                        "Groupie",
+                        "Stockman",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 40, fontWeight: FontWeight.bold),
@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.white,
                             fontSize: 15, fontWeight: FontWeight.w400),
                       ),
-                      Image.asset("assets/login.png"),
+                      Image.asset("assets/stocks.png"),
                       TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: textInputDecoration.copyWith(

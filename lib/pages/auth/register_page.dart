@@ -41,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       const Text(
-                        "Groupie",
+                        "Stockman",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 40, fontWeight: FontWeight.bold),
@@ -53,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             color: Colors.white,
                             fontSize: 15, fontWeight: FontWeight.w400),
                       ),
-                      Image.asset("assets/register.png"),
+                      Image.asset("assets/stocks.png"),
                       TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: textInputDecoration.copyWith(
