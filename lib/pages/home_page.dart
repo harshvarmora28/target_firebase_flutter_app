@@ -62,14 +62,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 23, 21, 19),
+      backgroundColor: Colors.black,
       appBar: AppBar(
         actions: [
           IconButton(
               onPressed: () {
                 nextScreen(context, const SearchPage());
               },
-              icon: const Icon(Icons.search_rounded))
+              icon: const Icon(Icons.search_rounded, color: Colors.black,))
         ],
         elevation: 0,
         centerTitle: true,
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text(
           "Groups",
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontWeight: FontWeight.bold,
             fontSize: 27,
           ),
@@ -197,7 +197,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).primaryColor,
         child: const Icon(
           Icons.add,
-          color: Colors.white,
+          color: Colors.black,
           size: 30,
         ),
       ),

@@ -47,13 +47,15 @@ class _GroupInfoState extends State<GroupInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
         backgroundColor: Theme.of(context).primaryColor,
-        title: const Text("Group Info"),
+        title: const Text("Group Info", style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w600,),),
         actions: [
           IconButton(
+            color: Colors.black,
               onPressed: () async {
                 showDialog(
                     barrierDismissible: false,
@@ -115,7 +117,7 @@ class _GroupInfoState extends State<GroupInfo> {
                     widget.groupName.substring(0, 1).toUpperCase(),
                     style: const TextStyle(
                       fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -127,17 +129,20 @@ class _GroupInfoState extends State<GroupInfo> {
                   children: [
                     Text(
                       "Name: ${widget.groupName}",
-                      style: TextStyle(fontWeight: FontWeight.w500),
+                      style: const TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
                     ),
                     const SizedBox(
                       height: 5,
                     ),
-                    Text("Admin: ${getName(widget.adminName)}"),
+                    Text("Admin: ${getName(widget.adminName)}", style: const TextStyle(color: Colors.white),),
                   ],
                 )
               ],
             ),
           ),
+          SizedBox(height: 24,),
+          Text("Members", style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 18),),
+          SizedBox(height: 5,),
           memberList(),
         ]),
       ),
@@ -166,26 +171,25 @@ class _GroupInfoState extends State<GroupInfo> {
                           getName(snapshot.data['members'][index])
                               .substring(0, 1)
                               .toUpperCase(),
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
+                          style: const TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
                         ),
                       ),
-                      title: Text(getName(snapshot.data['members'][index])),
-                      subtitle: Text(getId(snapshot.data['members'][index])),
+                      title: Text(getName(snapshot.data['members'][index]), style: const TextStyle(color: Colors.white),),
+                      subtitle: Text(getId(snapshot.data['members'][index]), style: const TextStyle(color: Colors.white),),
                     ),
                   );
                 },
               );
             } else {
               return const Center(
-                child: Text("NO MEMBERS"),
+                child: Text("NO MEMBERS", style: TextStyle(color: Colors.white),),
               );
             }
           } else {
             return const Center(
-              child: Text("NO MEMBERS"),
+              child: Text("NO MEMBERS", style: TextStyle(color: Colors.white),),
             );
           }
         } else {

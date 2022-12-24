@@ -5,5 +5,6 @@ class Constants {
   static String apiKey = "AIzaSyCDUfdvNQsCHMAH7EE_kmypuN4lKblFz3k";
   static String messagingSenderId = "974625835406";
   static String projectId = "groupie-flutter-chatapp";
-  final primaryColor = const Color(0xFFee7b64);
+  // final primaryColor = const Color(0xFFee7b64);
+  final primaryColor = Color.fromARGB(255, 213, 255, 88);
 }

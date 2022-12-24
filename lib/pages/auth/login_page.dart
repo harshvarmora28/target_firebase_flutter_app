@@ -25,7 +25,8 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 23, 21, 19),
+      // backgroundColor: Color.fromARGB(255, 23, 21, 19),
+      backgroundColor: Colors.black,
       body: _isLoading
           ? Center(
               child: CircularProgressIndicator(
@@ -34,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
           : SingleChildScrollView(
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 55),
                 child: Form(
                   key: formKey,
                   child: Column(
@@ -42,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       const Text(
-                        "Stockman",
+                        "Target",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 40, fontWeight: FontWeight.bold),
@@ -103,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 30,
                       ),
                       SizedBox(
                         width: double.infinity,
@@ -111,11 +112,10 @@ class _LoginPageState extends State<LoginPage> {
                           style: ElevatedButton.styleFrom(
                               primary: Theme.of(context).primaryColor,
                               elevation: 0,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30))),
+                              padding: const EdgeInsets.only(top: 14, bottom: 14)),
                           child: const Text("Sign In",
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 16)),
+                                  TextStyle(color: Colors.black, fontSize: 16)),
                           onPressed: () {
                             login();
                           },
@@ -132,8 +132,9 @@ class _LoginPageState extends State<LoginPage> {
                           TextSpan(
                               text: "Register here",
                               style: const TextStyle(
-                                  color: Colors.white,
-                                  decoration: TextDecoration.underline),
+                                  color: Color.fromARGB(255, 213, 255, 88),
+                                  fontWeight: FontWeight.w500,
+                                  ),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
                                   nextScreen(context, const RegisterPage());

@@ -24,7 +24,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 23, 21, 19),
+      backgroundColor: Colors.black,
       body: _isLoading
           ? Center(
               child: CircularProgressIndicator(
@@ -33,7 +33,7 @@ class _RegisterPageState extends State<RegisterPage> {
           : SingleChildScrollView(
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 55),
                 child: Form(
                   key: formKey,
                   child: Column(
@@ -41,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       const Text(
-                        "Stockman",
+                        "Target",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 40, fontWeight: FontWeight.bold),
@@ -126,7 +126,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         },
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 30,
                       ),
                       SizedBox(
                         width: double.infinity,
@@ -134,11 +134,10 @@ class _RegisterPageState extends State<RegisterPage> {
                           style: ElevatedButton.styleFrom(
                               primary: Theme.of(context).primaryColor,
                               elevation: 0,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30))),
+                              padding: const EdgeInsets.only(top: 14, bottom: 14)),
                           child: const Text("Register",
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 16)),
+                                  TextStyle(color: Colors.black, fontSize: 16)),
                           onPressed: () {
                             register();
                           },
@@ -155,8 +154,9 @@ class _RegisterPageState extends State<RegisterPage> {
                           TextSpan(
                               text: "Login now",
                               style: const TextStyle(
-                                  color: Colors.white,
-                                  decoration: TextDecoration.underline),
+                                  color: Color.fromARGB(255, 213, 255, 88),
+                                  fontWeight: FontWeight.w500,
+                                  ),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
                                   nextScreen(context, const LoginPage());

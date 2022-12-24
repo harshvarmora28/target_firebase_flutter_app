@@ -37,7 +37,7 @@ class _GroupTileState extends State<GroupTile> {
               widget.groupName.substring(0, 1).toUpperCase(),
               textAlign: TextAlign.center,
               style: const TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),
             ),

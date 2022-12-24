@@ -37,10 +37,10 @@ class _MessageTileState extends State<MessageTile> {
             Text(
               widget.sender.toUpperCase(),
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white, letterSpacing: -0.5),
+              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.black, letterSpacing: -0.5),
             ),
             const SizedBox(height: 8,),
-            Text(widget.message, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16, color: Colors.white),)
+            Text(widget.message, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16, color: Colors.black),)
           ],
         ),
       ),

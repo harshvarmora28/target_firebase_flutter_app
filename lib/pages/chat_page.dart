@@ -46,10 +46,11 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
-        title: Text(widget.groupName),
+        title: Text(widget.groupName, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w600,),),
         backgroundColor: Theme.of(context).primaryColor,
         actions: [
           IconButton(
@@ -62,7 +63,7 @@ class _ChatPageState extends State<ChatPage> {
                       adminName: admin,
                     ));
               },
-              icon: const Icon(Icons.info))
+              icon: const Icon(Icons.info, color: Colors.black,))
         ],
       ),
       body: Stack(
