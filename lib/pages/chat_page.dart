@@ -52,6 +52,7 @@ class _ChatPageState extends State<ChatPage> {
         elevation: 0,
         title: Text(widget.groupName, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w600,),),
         backgroundColor: Theme.of(context).primaryColor,
+        iconTheme: const IconThemeData(color: Colors.black),
         actions: [
           IconButton(
               onPressed: () {
@@ -74,9 +75,9 @@ class _ChatPageState extends State<ChatPage> {
             alignment: Alignment.bottomCenter,
             width: MediaQuery.of(context).size.width,
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
               width: MediaQuery.of(context).size.width,
-              color: Colors.grey[700],
+              color: Color.fromARGB(255, 27, 27, 27),
               child: Row(children: [
                 Expanded(
                     child: TextFormField(
@@ -96,16 +97,16 @@ class _ChatPageState extends State<ChatPage> {
                     sendMessage();
                   },
                   child: Container(
-                    height: 50,
-                    width: 50,
+                    height: 45,
+                    width: 45,
                     decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
+                      color: Color.fromARGB(255, 88, 255, 138),
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: const Center(
                       child: Icon(
                         Icons.send_rounded,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                     ),
                   ),

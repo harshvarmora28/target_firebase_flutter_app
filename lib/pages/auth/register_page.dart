@@ -53,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             color: Colors.white,
                             fontSize: 15, fontWeight: FontWeight.w400),
                       ),
-                      Image.asset("assets/stocks.png"),
+                      Image.asset("assets/target_logo_transparent.png"),
                       TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: textInputDecoration.copyWith(

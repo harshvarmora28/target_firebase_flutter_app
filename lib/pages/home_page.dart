@@ -74,6 +74,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
+        iconTheme: const IconThemeData(color: Colors.black),
         title: const Text(
           "Groups",
           style: TextStyle(
@@ -88,11 +89,19 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 50),
           children: <Widget>[
-            Icon(
-              Icons.account_circle,
-              size: 150,
-              color: Colors.grey[700],
+            CircleAvatar(
+            radius: 64,
+            backgroundColor: Theme.of(context).primaryColor,
+            child: Text(
+              userName.substring(0, 1).toUpperCase(),
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.w500,
+              ),
             ),
+          ),
             const SizedBox(
               height: 15,
             ),
@@ -343,6 +352,7 @@ class _HomePageState extends State<HomePage> {
           const Text(
             "You've not joined any groups, tap on the add icon to create a group or join the existing group.",
             textAlign: TextAlign.center,
+            style: const TextStyle(color: Colors.white70),
           )
         ],
       ),

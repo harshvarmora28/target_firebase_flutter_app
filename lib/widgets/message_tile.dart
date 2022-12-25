@@ -29,7 +29,8 @@ class _MessageTileState extends State<MessageTile> {
             topRight: Radius.circular(20),
             bottomRight: Radius.circular(20),
           ),
-          color: widget.sentByMe ? Theme.of(context).primaryColor : Colors.grey[700],
+          // color: widget.sentByMe ? Theme.of(context).primaryColor : Color.fromARGB(255, 88, 255, 138),
+          color: widget.sentByMe ? Color.fromARGB(255, 255, 133, 180) : Color.fromARGB(255, 88, 255, 138),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

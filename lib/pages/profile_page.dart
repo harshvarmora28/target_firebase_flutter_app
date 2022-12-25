@@ -22,10 +22,12 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         elevation: 0,
+        iconTheme: const IconThemeData(color: Colors.black),
+        centerTitle: true,
         title: const Text("Profile",
             style: TextStyle(
-                color: Colors.white,
-                fontSize: 27,
+                color: Colors.black,
+                fontSize: 25,
                 fontWeight: FontWeight.bold)),
       ),
       drawer: Drawer(
