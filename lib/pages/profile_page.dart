@@ -35,11 +35,19 @@ class _ProfilePageState extends State<ProfilePage> {
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 50),
           children: <Widget>[
-            Icon(
-              Icons.account_circle,
-              size: 150,
-              color: Colors.grey[700],
+            CircleAvatar(
+            radius: 64,
+            backgroundColor: Theme.of(context).primaryColor,
+            child: Text(
+              widget.userName.substring(0, 1).toUpperCase(),
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.w500,
+              ),
             ),
+          ),
             const SizedBox(
               height: 15,
             ),
@@ -134,15 +142,23 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Icon(
-              Icons.account_circle,
-              size: 160,
-              color: Colors.grey[700],
+            CircleAvatar(
+            radius: 64,
+            backgroundColor: Theme.of(context).primaryColor,
+            child: Text(
+              widget.userName.substring(0, 1).toUpperCase(),
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.w500,
+              ),
             ),
-            const SizedBox(height: 15,),
+          ),
+            const SizedBox(height: 40,),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("Full Name", style: TextStyle(fontSize: 17, color: Colors.white),),
+              const Text("Username", style: TextStyle(fontSize: 17, color: Colors.white),),
               Text(widget.userName, style: TextStyle(fontSize: 17, color: Colors.white),),
             ],
             ),

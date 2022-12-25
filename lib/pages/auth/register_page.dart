@@ -57,7 +57,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: textInputDecoration.copyWith(
-                            labelText: "Full Name",
+                            labelText: "Username",
                             labelStyle: TextStyle(color: Colors.white),
                             prefixIcon: Icon(
                               Icons.person,

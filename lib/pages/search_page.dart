@@ -49,14 +49,16 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Theme.of(context).primaryColor,
+        iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
         title: Text(
           "Search",
           style: TextStyle(
-              fontSize: 27, fontWeight: FontWeight.bold, color: Colors.white),
+              fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ),
       body: Column(children: [
@@ -67,11 +69,11 @@ class _SearchPageState extends State<SearchPage> {
             Expanded(
               child: TextField(
                 controller: searchController,
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: "Search groups...",
-                    hintStyle: TextStyle(color: Colors.white, fontSize: 16)),
+                    hintStyle: TextStyle(color: Colors.black, fontSize: 16)),
               ),
             ),
             GestureDetector(
@@ -87,7 +89,7 @@ class _SearchPageState extends State<SearchPage> {
                 ),
                 child: Icon(
                   Icons.search,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             )
@@ -160,14 +162,14 @@ class _SearchPageState extends State<SearchPage> {
         radius: 30,
         child: Text(
           groupName.substring(0, 1).toUpperCase(),
-          style: const TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
         ),
       ),
       title: Text(
         groupName,
-        style: const TextStyle(fontWeight: FontWeight.w600),
+        style: const TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
       ),
-      subtitle: Text("Admin: ${getName(admin)}"),
+      subtitle: Text("Admin: ${getName(admin)}", style: const TextStyle(color: Colors.white70),),
       trailing: InkWell(
         onTap: () async {
           await DatabaseService(uid: user!.uid)
@@ -198,26 +200,25 @@ class _SearchPageState extends State<SearchPage> {
             ? Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.black,
-                  border: Border.all(color: Colors.white, width: 1),
+                  color: Color.fromARGB(255, 88, 255, 138),
                 ),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Text(
                   "Joined",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
               )
             : Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Theme.of(context).primaryColor,
+                  color: Color.fromARGB(255, 255, 133, 180),
                 ),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Text(
                   "Join",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
       ),

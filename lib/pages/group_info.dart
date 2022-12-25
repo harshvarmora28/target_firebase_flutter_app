@@ -129,8 +129,8 @@ class _GroupInfoState extends State<GroupInfo> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Name: ${widget.groupName}",
-                      style: const TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
+                      widget.groupName,
+                      style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 17, color: Colors.white),
                     ),
                     const SizedBox(
                       height: 5,
@@ -163,7 +163,7 @@ class _GroupInfoState extends State<GroupInfo> {
                 itemBuilder: (context, index) {
                   return Container(
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 5, vertical: 15),
+                        const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
                     child: ListTile(
                       leading: CircleAvatar(
                         radius: 30,
@@ -177,8 +177,8 @@ class _GroupInfoState extends State<GroupInfo> {
                               fontWeight: FontWeight.w500),
                         ),
                       ),
-                      title: Text(getName(snapshot.data['members'][index]), style: const TextStyle(color: Colors.white),),
-                      subtitle: Text(getId(snapshot.data['members'][index]), style: const TextStyle(color: Colors.white),),
+                      title: Text(getName(snapshot.data['members'][index]), style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),),
+                      subtitle: Text(getId(snapshot.data['members'][index]), style: const TextStyle(color: Colors.white70, fontSize: 12),),
                     ),
                   );
                 },
