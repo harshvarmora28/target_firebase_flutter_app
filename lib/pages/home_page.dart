@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).primaryColor,
         iconTheme: const IconThemeData(color: Colors.black),
         title: const Text(
-          "Groups",
+          "Stocks",
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                   const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               leading: const Icon(Icons.group, color: Color.fromARGB(255, 192, 192, 192),),
               title: const Text(
-                "Groups",
+                "Stocks",
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -221,7 +221,7 @@ class _HomePageState extends State<HomePage> {
           return AlertDialog(
             backgroundColor: Color.fromARGB(255, 23, 21, 19),
             title: const Text(
-              "Create a group",
+              "Add new stock",
               textAlign: TextAlign.left,
               style: TextStyle(color: Colors.white),
             ),

@@ -23,30 +23,34 @@ class _WelcomePageState extends State<WelcomePage> {
             child: Image.asset("assets/welcome_png.png"),
           ),
           Container(
-              padding: const EdgeInsets.only(top: 40),
+              padding: const EdgeInsets.only(top: 35),
               color: Colors.black,
-              child: const Center(
-                child: Text(
-                  "Welcome to Target",
+              child: Container(
+                padding: const EdgeInsets.only(left: 28, right: 40),
+                child: const Text(
+                  "Achieving your Target",
+                  textAlign: TextAlign.start,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: 34,
                       fontWeight: FontWeight.w500),
                 ),
               )),
-              const SizedBox(height: 16,),
-              const Center(
-                child: Text("Traders community that discuss about indian stocks trading in indian stock exchanges which helps you to achieve your targets.",
+              const SizedBox(height: 14,),
+              Container(
+                padding: const EdgeInsets.only(left: 28, right: 28),
+                child: const Text("Traders community in which you can discuss about each indian stock trading in indian stock exchanges individually with fellow traders.",
                 textAlign: TextAlign.start,
                  style: TextStyle(color: Color.fromARGB(195, 255, 255, 255), fontWeight: FontWeight.w300),),
               ),
+              const SizedBox(height: 20,),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 115,),
+                  const SizedBox(height: 74,),
                   SizedBox(
-            width: 130,
+            width: 140,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   primary: Theme.of(context).primaryColor,
@@ -62,7 +66,7 @@ class _WelcomePageState extends State<WelcomePage> {
           ),
           const SizedBox(width: 22,),
           SizedBox(
-            width: 130,
+            width: 140,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   primary: Theme.of(context).primaryColor,

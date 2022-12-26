@@ -70,7 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               leading: const Icon(Icons.group, color: Color.fromARGB(255, 192, 192, 192),),
               title: const Text(
-                "Groups",
+                "Stocks",
                 style: TextStyle(color: Colors.white),
               ),
             ),
