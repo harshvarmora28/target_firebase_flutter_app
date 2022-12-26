@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:groupie_chatapp_firebase/helper/helper_function.dart';
 import 'package:groupie_chatapp_firebase/pages/auth/login_page.dart';
+import 'package:groupie_chatapp_firebase/pages/auth/welcome_page.dart';
 import 'package:groupie_chatapp_firebase/pages/home_page.dart';
 import 'package:groupie_chatapp_firebase/shared/constants.dart';
 
@@ -53,11 +54,12 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        fontFamily: "SofiaPro",
         primaryColor: Constants().primaryColor,
         scaffoldBackgroundColor: Colors.white
       ),
       debugShowCheckedModeBanner: false,
-      home: _isSignedIn ? const HomePage() : const LoginPage(),
+      home: _isSignedIn ? const HomePage() : const WelcomePage(),
     );
   }
 }
