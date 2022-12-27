@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.groupie_chatapp_firebase">
    <application
-        android:label="groupie_chatapp_firebase"
+        android:label="Target"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
