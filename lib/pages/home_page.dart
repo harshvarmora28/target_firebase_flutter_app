@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               onTap: () {
-                nextScreenReplace(
+                nextScreen(
                     context,
                     ProfilePage(
                       userName: userName,
@@ -241,21 +241,20 @@ class _HomePageState extends State<HomePage> {
                           });
                         },
                         style: const TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Theme.of(context).primaryColor),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.red),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Theme.of(context).primaryColor),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
+                        decoration: const InputDecoration(
+                          labelStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.w300),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(0)),
+                              borderSide: BorderSide(color: Color.fromARGB(255, 213, 255, 88), width: 1),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(0)),
+                              borderSide: BorderSide(color: Color.fromARGB(224, 156, 156, 156), width: 1),
+                            ),
+                            errorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(0)),
+                              borderSide: BorderSide(color: Color.fromARGB(255, 213, 255, 88), width: 1),
+                            ),
                         ),
                       ),
               ],
@@ -265,10 +264,12 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: const Text("Cancel"),
+                child: const Text("Cancel", style: TextStyle(color: Colors.black),),
                 style: ElevatedButton.styleFrom(
+                    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
                     primary: Theme.of(context).primaryColor),
               ),
+              const SizedBox(width: 3,),
               ElevatedButton(
                 onPressed: () async {
                   if (groupName != "") {
@@ -286,10 +287,12 @@ class _HomePageState extends State<HomePage> {
                         context, Colors.green, "Group created successfully!");
                   }
                 },
-                child: const Text("Create"),
+                child: const Text("Create", style: TextStyle(color: Colors.black),),
                 style: ElevatedButton.styleFrom(
+                    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
                     primary: Theme.of(context).primaryColor),
-              )
+              ), 
+              const SizedBox(width: 10,)
             ],
           );
         });
