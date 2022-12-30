@@ -72,8 +72,8 @@ class _SearchPageState extends State<SearchPage> {
                 style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
                     border: InputBorder.none,
-                    hintText: "Search groups...",
-                    hintStyle: TextStyle(color: Colors.black, fontSize: 16)),
+                    hintText: "Search eg: Wipro, BankNifty...",
+                    hintStyle: TextStyle(color: Color.fromARGB(255, 66, 66, 66), fontSize: 16)),
               ),
             ),
             GestureDetector(
@@ -179,7 +179,7 @@ class _SearchPageState extends State<SearchPage> {
               isJoined = !isJoined;
             });
             showSnackbar(
-                context, Colors.green, "Successfully joined the group!");
+                context, Colors.green, "Successfully added the stock!");
             Future.delayed(const Duration(seconds: 2), () {
               nextScreen(
                   context,
@@ -192,7 +192,7 @@ class _SearchPageState extends State<SearchPage> {
             setState(() {
               isJoined = isJoined;
               showSnackbar(
-                  context, Colors.red, "Your left the group $groupName");
+                  context, Colors.red, "Your left from stock $groupName");
             });
           }
         },

@@ -284,7 +284,7 @@ class _HomePageState extends State<HomePage> {
                     });
                     Navigator.of(context).pop();
                     showSnackbar(
-                        context, Colors.green, "Group created successfully!");
+                        context, Colors.green, "Stock added successfully!");
                   }
                 },
                 child: const Text("Create", style: TextStyle(color: Colors.black),),
@@ -353,7 +353,7 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           const Text(
-            "You've not joined any groups, tap on the add icon to create a group or join the existing group.",
+            "Use the search bar to add instruments to your watchlist, or tap on add icon to add new stock.",
             textAlign: TextAlign.center,
             style: const TextStyle(color: Colors.white70),
           )
