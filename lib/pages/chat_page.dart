@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:groupie_chatapp_firebase/pages/chart_page.dart';
 import 'package:groupie_chatapp_firebase/pages/group_info.dart';
 import 'package:groupie_chatapp_firebase/service/database_service.dart';
 import 'package:groupie_chatapp_firebase/widgets/message_tile.dart';
@@ -54,6 +55,15 @@ class _ChatPageState extends State<ChatPage> {
         backgroundColor: Theme.of(context).primaryColor,
         iconTheme: const IconThemeData(color: Colors.black),
         actions: [
+          IconButton(
+              onPressed: () {
+                nextScreen(
+                    context,
+                    ChartPage(
+                      groupName: widget.groupName,
+                    ));
+              },
+              icon: const Icon(Icons.price_change, color: Colors.black,)), 
           IconButton(
               onPressed: () {
                 nextScreen(
