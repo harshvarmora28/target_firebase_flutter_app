@@ -32,7 +32,7 @@ class _SearchPageState extends State<SearchPage> {
   getCurrentUserIdandName() async {
     await HelperFunction.getUserNameFromSF().then((value) {
       setState(() {
-        userName = value!;
+        userName = value!.toUpperCase();
       });
     });
     user = FirebaseAuth.instance.currentUser;
@@ -68,12 +68,16 @@ class _SearchPageState extends State<SearchPage> {
           child: Row(children: [
             Expanded(
               child: TextField(
+                onChanged: (text) {
+                  initiateSearchMethod();
+                },
                 controller: searchController,
                 style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: "Search eg: Wipro, BankNifty...",
-                    hintStyle: TextStyle(color: Color.fromARGB(255, 66, 66, 66), fontSize: 16)),
+                    hintStyle: TextStyle(
+                        color: Color.fromARGB(255, 66, 66, 66), fontSize: 16)),
               ),
             ),
             GestureDetector(
@@ -112,7 +116,7 @@ class _SearchPageState extends State<SearchPage> {
         isLoading = true;
       });
       await DatabaseService()
-          .searchByName(searchController.text)
+          .searchByName(searchController.text.toUpperCase())
           .then((snapshot) {
         setState(() {
           searchSnapshot = snapshot;
@@ -162,14 +166,19 @@ class _SearchPageState extends State<SearchPage> {
         radius: 30,
         child: Text(
           groupName.substring(0, 1).toUpperCase(),
-          style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
+          style:
+              const TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
         ),
       ),
       title: Text(
         groupName,
-        style: const TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
+        style:
+            const TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
       ),
-      subtitle: Text("Admin: ${getName(admin)}", style: const TextStyle(color: Colors.white70),),
+      subtitle: Text(
+        "Admin: ${getName(admin)}",
+        style: const TextStyle(color: Colors.white70),
+      ),
       trailing: InkWell(
         onTap: () async {
           await DatabaseService(uid: user!.uid)

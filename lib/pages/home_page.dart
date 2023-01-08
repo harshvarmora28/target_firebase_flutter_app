@@ -237,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                     : TextField(
                         onChanged: (val) {
                           setState(() {
-                            groupName = val;
+                            groupName = val.toUpperCase();
                           });
                         },
                         style: const TextStyle(color: Colors.white),
